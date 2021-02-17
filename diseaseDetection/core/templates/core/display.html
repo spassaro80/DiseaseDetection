@@ -1,0 +1,64 @@
+{% extends 'core/template.html' %}
+
+{% block header %}
+    <title>Display Disease</title>
+{% endblock %}
+
+{% block title %}
+<a class="navbar-brand" href="#pablo"> Display Disease </a>
+{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card stacked-form">
+                                    <div class="card-header ">
+                                        <h4 class="card-title">{{disease.name}}</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                        <p>{{disease.description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card ">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Symptoms</h4>
+                                </div>
+                                <div class="card-body ">
+                                    <div class="row">
+                                    {% for category in categories %}
+                                        <label class="col-sm-2 control-label mt-3">{{category}}</label>
+                                        <div class="col-sm-2 col-sm-offset-1 checkbox-radios">
+                                        {% for symptom in category.symptom_set.all %}
+                                            <div class="form-check mt-3">
+                                                {% if symptom in disease.symptoms.all%}
+                                                <label class="form-check-label" for="symptoms">
+                                                <input type="checkbox"  checked="" name="symptoms" value="{{symptom}}" id="{{symptom}}" data-toggle="switch" data-on-color="info" data-off-color="info" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>">
+                                                <span class="toggle"></span>
+                                                {{symptom}}  
+                                                </label>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
+                                        </div>
+                                    {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+

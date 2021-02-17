@@ -1,0 +1,73 @@
+{% extends 'core/template.html' %}
+
+{% block header %}
+    <title>Create new Disease</title>
+{% endblock %}
+
+{% block title %}
+<a class="navbar-brand" href="#pablo"> Create new Disease </a>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <form action="{% url 'core:create_survey' disease.id %}" method="POST" >{% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card stacked-form">
+                                        <div class="card-header ">
+                                            <h4 class="card-title">Submit a new Survey for  {{disease.name}}</h4>
+                                        </div>
+                                        <div class="card-body ">
+                                                <div class="form-group">
+                                                    <label for="name">Name of Disease</label>
+                                                    <input type="text" placeholder="Enter name" class="form-control" id="name" value="{{disease.name}}" name="name" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea id="description" name="description" placeholder="Enter a brief description of your symptoms" style="width:100%;"rows="5"></textarea>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4 class="card-title">Select your Symptoms</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="row">
+                                        {% for category in categories %}
+                                            <label class="col-sm-2 control-label">{{category}}</label>
+                                            <div class="col-sm-2 col-sm-offset-1 checkbox-radios">
+                                            {% for symptom in category.symptom_set.all %}
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="symptoms">
+                                                    <input type="checkbox" name="symptoms" value="{{symptom}}" id="{{symptom}}" data-toggle="switch" data-on-color="info" data-off-color="info" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>">
+                                                    <span class="toggle"></span>
+                                                    {{symptom}}  
+                                                    </label>
+                                                </div>
+                                            {% endfor %}
+                                            </div>
+                                        {% endfor %}
+                                        </div>
+                                        <div class="card-footer ">
+                                            <button type="submit" class="btn btn-fill btn-info">Submit</button>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+</div>
+{% endblock %}

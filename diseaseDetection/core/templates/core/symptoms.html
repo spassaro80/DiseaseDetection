@@ -1,0 +1,58 @@
+{% extends 'core/template.html' %}
+
+{% block header %}
+    <title>All Symptoms</title>
+{% endblock %}
+
+{% block title %}
+<a class="navbar-brand" href="#pablo"> All symptoms </a>
+{% endblock %}
+{% block content %}
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card data-tables">
+                                <div class="card-body table-striped table-no-bordered table-hover dataTable dtr-inline table-full-width">
+                                    <div class="toolbar">
+                                        <!--        Here you can write extra buttons/actions for the toolbar              -->
+                                    </div>
+                                    <div class="fresh-datatables">
+                                        <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Symptom</th>
+                                                    <th>Category</th>
+                                                    <th class="disabled-sorting text-right">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Symptom</th>
+                                                    <th>Category</th>
+                                                    <th class="text-right">Actions</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                            {% for symptom in symptoms %}
+                                                <tr>
+                                                    <td>{{symptom.name}}</td>
+                                                    <td>{{symptom.category}}</td>
+                                                    <td class="text-right">
+                                                        <a href="#" class="btn btn-link btn-success display"><i class="fa fa-image"></i></a>
+                                                        <a href="#" class="btn btn-link btn-warning edit"><i class="fa fa-edit"></i></a>
+                                                        <a href="#" class="btn btn-link btn-danger remove"><i class="fa fa-times"></i></a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+

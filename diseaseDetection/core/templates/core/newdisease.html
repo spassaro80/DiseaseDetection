@@ -1,0 +1,101 @@
+{% extends 'core/template.html' %}
+
+{% block header %}
+    <title>Create new Disease</title>
+{% endblock %}
+
+{% block title %}
+<a class="navbar-brand" href="#pablo"> Create new Disease </a>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <form action="{% url 'core:newdisease' %}" method="POST" >{% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card stacked-form">
+                                        <div class="card-header ">
+                                            <h4 class="card-title">Disease Name</h4>
+                                        </div>
+                                        <div class="card-body ">
+                                                <div class="form-group">
+                                                    <label for="name">New Disease</label>
+                                                    <input type="text" placeholder="Enter name" class="form-control" id="name"  name="name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea id="description" name="description" placeholder="Enter a brief disease description" style="width:100%;"rows="5"></textarea>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4 class="card-title">Available Symptoms</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="row">
+                                        {% for category in categories %}
+                                            <label class="col-sm-2 mt-2 control-label">{{category}}</label>
+                                            <div class="col-sm-2 col-sm-offset-1 checkbox-radios">
+                                                <div class="col md-6">
+                                                    <select name="{{category}}" class="selectpicker" data-title="Select symptom" data-style="btn-default btn-outline" data-menu-style="dropdown-blue">
+                                                    {% for symptom in category.symptom_set.all %}                  
+                                                    <option value="{{symptom}}">{{symptom}}</option>
+                                                    {% endfor %}
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4 class="card-title">Selected Symptoms</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="row">
+                                        {% for category in categories %}
+                                            <div class="col-4">
+                                                <h4 class="ml-3">{{category}}</h4>
+                                                        <div id="{{category}}">
+                                                    {% for symptom in category.symptom_set.all %}
+                                                            <div class="form-check">
+                                                                <label class="form-check-label invisible" id= "{{symptom}}" >
+                                                                <input class="form-check-input" type="checkbox" name="symptoms" value="{{symptom}}">
+                                                                <span class="form-check-sign"></span>
+                                                                    {{symptom}}
+                                                                </label>
+                                                            </div>
+                                                    {%endfor%}
+                                                    </div>
+                                            </div>
+                                        {% endfor %}
+                                        </div>
+                                        <div class="card-footer ">
+                                            <button type="submit" class="btn btn-fill btn-info">Submit</button>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
