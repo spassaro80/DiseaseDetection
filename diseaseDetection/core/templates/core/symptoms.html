@@ -1,11 +1,12 @@
 {% extends 'core/template.html' %}
+{% load i18n %}
 
 {% block header %}
-    <title>All Symptoms</title>
+    <title>{% trans "All Symptoms" %}</title>
 {% endblock %}
 
 {% block title %}
-<a class="navbar-brand" href="#pablo"> All symptoms </a>
+<a class="navbar-brand" href="#pablo">{% trans "All symptoms" %} </a>
 {% endblock %}
 {% block content %}
             <div class="content">
@@ -21,16 +22,16 @@
                                         <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                                             <thead>
                                                 <tr>
-                                                    <th>Symptom</th>
-                                                    <th>Category</th>
-                                                    <th class="disabled-sorting text-right">Actions</th>
+                                                    <th>{% trans "Symptom" %}</th>
+                                                    <th>{% trans "Category" %}</th>
+                                                    <th class="disabled-sorting text-right">{% trans "Actions" %}</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th>Symptom</th>
-                                                    <th>Category</th>
-                                                    <th class="text-right">Actions</th>
+                                                    <th>{% trans "Symptom" %}</th>
+                                                    <th>{% trans "Category" %}</th>
+                                                    <th class="text-right">{% trans "Actions" %}</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>

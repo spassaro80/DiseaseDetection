@@ -1,11 +1,12 @@
 {% extends 'core/template.html' %}
+{% load i18n %}
 
 {% block header %}
-    <title>Display Disease</title>
+    <title>{% trans "Display Disease" %}</title>
 {% endblock %}
 
 {% block title %}
-<a class="navbar-brand" href="#pablo"> Display Disease </a>
+<a class="navbar-brand" href="#pablo"> {% trans "Display Disease" %} </a>
 {% endblock %}
 {% block content %}
 <div class="content">
@@ -29,7 +30,7 @@
                         <div class="col-md-12">
                             <div class="card ">
                                 <div class="card-header ">
-                                    <h4 class="card-title">Symptoms</h4>
+                                    <h4 class="card-title">{% trans "Symptoms" %}</h4>
                                 </div>
                                 <div class="card-body ">
                                     <div class="row">

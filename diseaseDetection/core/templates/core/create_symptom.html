@@ -1,11 +1,12 @@
 {% extends 'core/template.html' %}
+{% load i18n %}
 
 {% block header %}
-    <title>Create new Symptom</title>
+    <title>{% trans "Create new Symptom" %}</title>
 {% endblock %}
 
 {% block title %}
-<a class="navbar-brand" href="#pablo"> Create new Symptom </a>
+<a class="navbar-brand" href="#pablo"> {% trans "Create new Symptom" %} </a>
 {% endblock %}
 
 {% block content %}
@@ -20,11 +21,11 @@
                                 <div class="col-md-6">
                                     <div class="card stacked-form">
                                         <div class="card-header ">
-                                            <h4 class="card-title">Create New Symptom</h4>
+                                            <h4 class="card-title">{% trans "Create New Symptom" %}</h4>
                                         </div>
                                         <div class="card-body ">
                                             <div class="form-group">
-                                                <label for="name">Symptom Name</label>
+                                                <label for="name">{% trans "Symptom Name" %}</label>
                                                 <input type="text" placeholder="Enter name" class="form-control" id="name"  name="name">
                                             </div>
                                             <div class="form-group">
@@ -35,7 +36,7 @@
                                                 </select>
                                             </div>
                                         <div class="card-footer ">
-                                            <button type="submit" class="btn btn-fill btn-info">Submit</button>
+                                            <button type="submit" class="btn btn-fill btn-info">{% trans "Submit" %}</button>
                                         </div>
                                     </div>
                                     </div>

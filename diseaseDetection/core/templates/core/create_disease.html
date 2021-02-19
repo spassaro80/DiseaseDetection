@@ -1,11 +1,11 @@
 {% extends 'core/template.html' %}
-
+{% load i18n %}
 {% block header %}
-    <title>Create new Disease</title>
+    <title>{% trans "Create new Disease"   %} </title>
 {% endblock %}
 
 {% block title %}
-<a class="navbar-brand" href="#pablo"> Create new Disease </a>
+<a class="navbar-brand" href="#pablo"> {% trans "Create new Disease" %} </a>
 {% endblock %}
 
 {% block content %}
@@ -20,11 +20,11 @@
                                 <div class="col-md-6">
                                     <div class="card stacked-form">
                                         <div class="card-header ">
-                                            <h4 class="card-title">Disease Name</h4>
+                                            <h4 class="card-title">{% trans 'Disease Name' %}</h4>
                                         </div>
                                         <div class="card-body ">
                                                 <div class="form-group">
-                                                    <label for="name">New Disease</label>
+                                                    <label for="name">{% trans "New Disease" %}</label>
                                                     <input type="text" placeholder="Enter name" class="form-control" id="name"  name="name">
                                                 </div>
                                                 <div class="form-group">
@@ -37,7 +37,7 @@
                             <div class="col-md-12">
                                 <div class="card ">
                                     <div class="card-header ">
-                                        <h4 class="card-title">Symptoms</h4>
+                                        <h4 class="card-title">{% trans "Symptoms" %}</h4>
                                     </div>
                                     <div class="card-body ">
                                         <div class="row">
@@ -57,7 +57,7 @@
                                         {% endfor %}
                                         </div>
                                         <div class="card-footer ">
-                                            <button type="submit" class="btn btn-fill btn-info">Submit</button>
+                                            <button type="submit" class="btn btn-fill btn-info">{% trans "Submit" %}</button>
                                         </div>
                                         </div>
                                 </div>

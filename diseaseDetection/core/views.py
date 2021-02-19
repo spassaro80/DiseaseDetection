@@ -1,7 +1,8 @@
 from django.shortcuts import render,redirect,reverse
 from .models import Disease, Category, Symptom, Survey
 from django.contrib.auth.decorators import login_required
-
+from django.utils import translation
+from django.conf import settings
 # Create your views here.
 
 def index(request):
@@ -49,7 +50,7 @@ def display(request, id):
         return render(request, "core/display.html", {'disease': disease,  'categories': categories})
     except Exception as e:
         print (e)
-        return render(request, "core/home.html")
+        return redirect('core:home')
 
 @login_required
 def update(request, id):
@@ -62,7 +63,7 @@ def update(request, id):
             return render(request, "core/update.html", {'disease': disease,  'categories': categories})
         except Exception as e:
             print (e)
-            return render(request, "core/home.html")
+            return redirect('core:home')
 
     
     elif request.method == "POST":
@@ -88,7 +89,7 @@ def symptoms(request):
         return render(request, "core/symptoms.html", {'symptoms': symptoms})
     except Exception as e:
         print (e)
-        return render(request, "core/home.html")
+        return redirect('core:home')
 
 @login_required
 def create_symptom(request, category_id=None):
@@ -158,3 +159,8 @@ def create_survey(request, disease_id):
 
         return render(request, "core/diseases.html", {'diseases': diseases})
 
+def set_language(request):
+    language = request.POST.get('language', settings.LANGUAGE_CODE)
+    translation.activate(language)
+    request.session[translation.LANGUAGE_SESSION_KEY] = language
+    return redirect('core:home')

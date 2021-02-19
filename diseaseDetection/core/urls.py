@@ -13,5 +13,4 @@ urlpatterns = [
     path('update/<id>', views.update, name="update"),
     path('newdisease/', views.newdisease, name="newdisease"),
     path('create_survey/<disease_id>', views.create_survey, name="create_survey"),
-    
 ]
