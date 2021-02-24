@@ -1,20 +1,21 @@
 from django.contrib import admin
 from .models import Disease, Symptom, Category, Survey
+from modeltranslation.admin import TranslationAdmin
 
 # Register your models here.
-class DiseaseAdmin(admin.ModelAdmin):
+class DiseaseAdmin(TranslationAdmin):
     model = Disease
 
-class SymptomAdmin(admin.ModelAdmin):
+class SymptomAdmin(TranslationAdmin):
     model = Symptom
 
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(TranslationAdmin):
     model = Category
 
-class CategoryAdmin(admin.ModelAdmin):
+class SurveyAdmin(TranslationAdmin):
     model = Survey
 
-admin.site.register(Disease)
-admin.site.register(Symptom)
-admin.site.register(Category)
-admin.site.register(Survey)
+admin.site.register(Disease, TranslationAdmin)
+admin.site.register(Symptom,SymptomAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Survey, SurveyAdmin)

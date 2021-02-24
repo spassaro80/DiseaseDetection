@@ -44,9 +44,10 @@
                                     <div class="card-body ">
                                         <div class="row">
                                         {% for category in categories %}
-                                            <label class="col-sm-2 control-label">{{category}}</label>
+                                            <label class="col-sm-2 control-label">{{category.name}}</label>
                                             <div class="col-sm-2 col-sm-offset-1 checkbox-radios">
                                             {% for symptom in category.symptom_set.all %}
+                                            {% if symptom in disease.symptoms.all%}
                                                 <div class="form-check">
                                                     <label class="form-check-label" for="symptoms">
                                                     <input type="checkbox" name="symptoms" value="{{symptom}}" id="{{symptom}}" data-toggle="switch" data-on-color="info" data-off-color="info" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>">
@@ -54,6 +55,7 @@
                                                     {{symptom}}  
                                                     </label>
                                                 </div>
+                                            {% endif%}
                                             {% endfor %}
                                             </div>
                                         {% endfor %}

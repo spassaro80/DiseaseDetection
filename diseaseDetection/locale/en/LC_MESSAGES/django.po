@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-19 12:08+0100\n"
-"PO-Revision-Date: 2021-02-18 15:11+0000\n"
+"POT-Creation-Date: 2021-02-20 10:34+0100\n"
+"PO-Revision-Date: 2021-02-20 10:41+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,19 +19,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.5\n"
 
-#: .\core\models.py:9 .\core\templates\core\symptoms.html:25
-#: .\core\templates\core\symptoms.html:32
+#: .\core\models.py:9 .\core\templates\core\symptoms.html:26
+#: .\core\templates\core\symptoms.html:33
 msgid "Category"
 msgstr ""
 
-#: .\core\models.py:20 .\core\templates\core\symptoms.html:24
-#: .\core\templates\core\symptoms.html:31
+#: .\core\models.py:20 .\core\templates\core\symptoms.html:25
+#: .\core\templates\core\symptoms.html:32
 msgid "Symptom"
 msgstr ""
 
 #: .\core\models.py:28 .\core\templates\core\diseases.html:25
 #: .\core\templates\core\diseases.html:32
-#, fuzzy
 #| msgid "Diseases"
 msgid "Disease"
 msgstr "Diseases"
@@ -42,8 +41,8 @@ msgstr ""
 
 #: .\core\templates\core\create_disease.html:4
 #: .\core\templates\core\create_disease.html:8
-#: .\core\templates\core\create_survey.html:4
-#: .\core\templates\core\create_survey.html:8
+#: .\core\templates\core\create_survey.html:6
+#: .\core\templates\core\create_survey.html:10
 #: .\core\templates\core\newdisease.html:4
 #: .\core\templates\core\newdisease.html:8
 msgid "Create new Disease"
@@ -51,55 +50,54 @@ msgstr ""
 
 #: .\core\templates\core\create_disease.html:23
 #: .\core\templates\core\newdisease.html:23
-#, fuzzy
 #| msgid "Diseases"
 msgid "Disease Name"
 msgstr "Diseases"
 
 #: .\core\templates\core\create_disease.html:27
 #: .\core\templates\core\newdisease.html:27
-#, fuzzy
 #| msgid "Diseases"
 msgid "New Disease"
 msgstr "Diseases"
 
 #: .\core\templates\core\create_disease.html:40
-#: .\core\templates\core\template.html:60 .\core\templates\core\update.html:40
+#: .\core\templates\core\display.html:33
+#: .\core\templates\core\template.html:60 .\core\templates\core\update.html:41
 msgid "Symptoms"
 msgstr ""
 
 #: .\core\templates\core\create_disease.html:60
-#: .\core\templates\core\create_survey.html:60
-#: .\core\templates\core\create_symptom.html:38
+#: .\core\templates\core\create_survey.html:64
+#: .\core\templates\core\create_symptom.html:39
 #: .\core\templates\core\newdisease.html:85
-#: .\core\templates\core\update.html:60
+#: .\core\templates\core\update.html:61
 msgid "Submit"
 msgstr ""
 
-#: .\core\templates\core\create_survey.html:23
+#: .\core\templates\core\create_survey.html:25
 msgid "Submit a new Survey for"
 msgstr ""
 
-#: .\core\templates\core\create_survey.html:27
+#: .\core\templates\core\create_survey.html:29
 #, fuzzy
 #| msgid "Diseases"
 msgid "Name of Disease"
 msgstr "Diseases"
 
-#: .\core\templates\core\create_survey.html:40
+#: .\core\templates\core\create_survey.html:42
 msgid "Select your Symptoms"
 msgstr ""
 
-#: .\core\templates\core\create_symptom.html:4
-#: .\core\templates\core\create_symptom.html:8
+#: .\core\templates\core\create_symptom.html:5
+#: .\core\templates\core\create_symptom.html:9
 msgid "Create new Symptom"
 msgstr ""
 
-#: .\core\templates\core\create_symptom.html:23
+#: .\core\templates\core\create_symptom.html:24
 msgid "Create New Symptom"
 msgstr ""
 
-#: .\core\templates\core\create_symptom.html:27
+#: .\core\templates\core\create_symptom.html:28
 msgid "Symptom Name"
 msgstr ""
 
@@ -114,22 +112,22 @@ msgstr ""
 
 #: .\core\templates\core\diseases.html:27
 #: .\core\templates\core\diseases.html:34
-#: .\core\templates\core\symptoms.html:26
-#: .\core\templates\core\symptoms.html:33
+#: .\core\templates\core\symptoms.html:27
+#: .\core\templates\core\symptoms.html:34
 msgid "Actions"
 msgstr ""
 
-#: .\core\templates\core\display.html:4 .\core\templates\core\display.html:8
+#: .\core\templates\core\display.html:5 .\core\templates\core\display.html:9
 #, fuzzy
 #| msgid "Diseases"
 msgid "Display Disease"
 msgstr "Diseases"
 
-#: .\core\templates\core\home.html:5
+#: .\core\templates\core\home.html:6
 msgid "Welcome to the HomePage"
 msgstr ""
 
-#: .\core\templates\core\home.html:8
+#: .\core\templates\core\home.html:9
 msgid "Disease Detection HomePage"
 msgstr ""
 
@@ -141,11 +139,11 @@ msgstr ""
 msgid "Selected Symptoms"
 msgstr ""
 
-#: .\core\templates\core\symptoms.html:4
+#: .\core\templates\core\symptoms.html:5
 msgid "All Symptoms"
 msgstr ""
 
-#: .\core\templates\core\symptoms.html:8
+#: .\core\templates\core\symptoms.html:9
 msgid "All symptoms"
 msgstr ""
 
@@ -189,30 +187,52 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-#: .\core\templates\core\update.html:4 .\core\templates\core\update.html:8
+#: .\core\templates\core\update.html:5 .\core\templates\core\update.html:9
 #, fuzzy
 #| msgid "Diseases"
 msgid "Update Disease"
 msgstr "Diseases"
 
-#: .\core\templates\core\update.html:23
+#: .\core\templates\core\update.html:24
 #, fuzzy
 #| msgid "Diseases"
 msgid "Update current Disease"
 msgstr "Diseases"
 
-#: .\core\templates\core\update.html:27
+#: .\core\templates\core\update.html:28
 msgid "Name and description"
 msgstr ""
 
-#: .\diseaseDetection\settings.py:59
+#: .\diseaseDetection\settings.py:60
 msgid "Spanish"
 msgstr "Spanish"
 
-#: .\diseaseDetection\settings.py:60
+#: .\diseaseDetection\settings.py:61
 msgid "Italian"
 msgstr "Italian"
 
-#: .\diseaseDetection\settings.py:61
+#: .\diseaseDetection\settings.py:62
 msgid "English"
 msgstr "English"
+
+#: .\diseaseDetection\settings.py:63
+msgid "French"
+msgstr ""
+
+#: .\diseaseDetection\settings.py:64
+msgid "German"
+msgstr ""
+
+#: .\diseaseDetection\settings.py:65
+msgid "Romanian"
+msgstr ""
+
+#: .\diseaseDetection\settings.py:66
+#, fuzzy
+#| msgid "English"
+msgid "Polish"
+msgstr "English"
+
+#: .\diseaseDetection\settings.py:67
+msgid "Hungarian"
+msgstr ""

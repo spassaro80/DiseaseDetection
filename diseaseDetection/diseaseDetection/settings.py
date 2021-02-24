@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'registration',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,6 +60,11 @@ LANGUAGES = (
     ('es', _('Spanish')),
     ('it', _('Italian')),
     ('en', _('English')),
+    ('fr', _('French')),
+    ('de', _('German')),
+    ('ro', _('Romanian')),
+    ('pl', _('Polish')),
+    ('hu', _('Hungarian')),
 )
 
 ROOT_URLCONF = 'diseaseDetection.urls'
