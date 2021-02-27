@@ -25,10 +25,10 @@
                                         <div class="card-body ">
                                                 <div class="form-group">
                                                     <label for="name">{% trans "New Disease" %}</label>
-                                                    <input type="text" placeholder="Enter name" class="form-control" id="name"  name="name">
+                                                    <input type="text" placeholder="{% trans 'Enter name' %}" class="form-control" id="name"  name="name">
                                                 </div>
                                                 <div class="form-group">
-                                                    <textarea id="description" name="description" placeholder="Enter a brief disease description" style="width:100%;"rows="5"></textarea>
+                                                    <textarea id="description" name="description" placeholder="{% trans 'Enter a brief disease description' %}" style="width:100%;"rows="5"></textarea>
                                                 </div>
                                         </div>
                                     </div>
@@ -45,7 +45,7 @@
                                             <label class="col-sm-2 mt-2 control-label">{{category}}</label>
                                             <div class="col-sm-2 col-sm-offset-1 checkbox-radios">
                                                 <div class="col md-6">
-                                                    <select name="{{category}}" class="selectpicker" data-title="Select symptom" data-style="btn-default btn-outline" data-menu-style="dropdown-blue">
+                                                    <select name="{{category}}" class="selectpicker" data-title="{% trans 'Select symptom' %}" data-style="btn-default btn-outline" data-menu-style="dropdown-blue">
                                                     {% for symptom in category.symptom_set.all %}                  
                                                     <option value="{{symptom}}">{{symptom}}</option>
                                                     {% endfor %}

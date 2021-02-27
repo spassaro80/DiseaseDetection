@@ -40,8 +40,8 @@
                                                     <td>{{disease.name}}</td>
                                                     <td>{{disease.description}}</td>
                                                     <td class="text-right">
-                                                        <a href="{% url 'core:display' disease.pk %}" class="btn btn-link btn-success display"><i class="fa fa-image"></i></a>
-                                                        <a href="{% url 'core:update' disease.pk %}" class="btn btn-link btn-warning edit"><i class="fa fa-edit"></i></a>
+                                                        <a href="{% url 'core:display' disease.pk %}" title="{% trans 'Display Disease'%}" class="btn btn-link btn-success display"><i class="fa fa-image"></i></a>
+                                                        <a href="{% url 'core:update' disease.pk %}" title="{% trans 'Update Disease'%}" class="btn btn-link btn-warning edit"><i class="fa fa-edit"></i></a>
                                                         <a href="#" class="btn btn-link btn-danger remove"><i class="fa fa-times"></i></a>
                                                     </td>
                                                 </tr>

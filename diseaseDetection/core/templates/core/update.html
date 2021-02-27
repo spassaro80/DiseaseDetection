@@ -26,7 +26,7 @@
                                         <div class="card-body ">
                                                 <div class="form-group">
                                                     <label for="name">{% trans "Name and description" %}</label>
-                                                    <input type="text" placeholder="Enter name" class="form-control" id="name"  value="{{disease.name}}" name="name">
+                                                    <input type="text" placeholder="{%trans 'Enter name' %}" class="form-control" id="name"  value="{{disease.name}}" name="name">
                                                 </div>
                                                 <div class="form-group">
                                                     <textarea id="description" name="description"  style="width:100%;"rows="5">{{disease.description}}</textarea>

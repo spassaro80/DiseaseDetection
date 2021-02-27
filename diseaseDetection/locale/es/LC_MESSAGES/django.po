@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-20 10:34+0100\n"
-"PO-Revision-Date: 2021-02-20 10:36+0000\n"
+"POT-Creation-Date: 2021-02-24 19:26+0100\n"
+"PO-Revision-Date: 2021-02-24 19:26+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -56,6 +56,20 @@ msgstr "Enfermedades"
 #: .\core\templates\core\newdisease.html:27
 msgid "New Disease"
 msgstr "Enfermedades"
+
+#: .\core\templates\core\create_disease.html:28
+#: .\core\templates\core\create_survey.html:30
+#: .\core\templates\core\create_symptom.html:29
+#: .\core\templates\core\newdisease.html:28
+#: .\core\templates\core\update.html:29
+msgid "Enter name"
+msgstr "Introducir un nombre"
+
+#: .\core\templates\core\create_disease.html:31
+#: .\core\templates\core\create_survey.html:33
+#: .\core\templates\core\newdisease.html:31
+msgid "Enter a brief disease description"
+msgstr "Describir brevemente la enfermedad"
 
 #: .\core\templates\core\create_disease.html:40
 #: .\core\templates\core\display.html:33
@@ -128,6 +142,11 @@ msgstr "Revisión de enfermedades  - Homepage"
 msgid "Available Symptoms"
 msgstr "Síntomas disponibles"
 
+#: .\core\templates\core\newdisease.html:48
+#| msgid "Selected Symptoms"
+msgid "Select symptom"
+msgstr "Seleccionar síntoma"
+
 #: .\core\templates\core\newdisease.html:63
 msgid "Selected Symptoms"
 msgstr "Síntomas seleccionados"
@@ -165,10 +184,14 @@ msgid "Accounts"
 msgstr "Cuentas "
 
 #: .\core\templates\core\template.html:90
+#: .\registration\templates\registration\login.html:51
+#: .\registration\templates\registration\login.html:73
+#: .\registration\templates\registration\login.html:88
 msgid "Login"
-msgstr "Login"
+msgstr "Entrar"
 
 #: .\core\templates\core\template.html:96
+#: .\registration\templates\registration\login.html:46
 msgid "Register"
 msgstr "Registrar nuevo usuario"
 
@@ -213,10 +236,27 @@ msgid "Romanian"
 msgstr "Rumano"
 
 #: .\diseaseDetection\settings.py:66
-#| msgid "English"
 msgid "Polish"
 msgstr "Polaco"
 
 #: .\diseaseDetection\settings.py:67
 msgid "Hungarian"
 msgstr "Ungaro"
+
+#: .\registration\templates\registration\login.html:30
+msgid "Diseases Control Web Page"
+msgstr "Revisión de enfermedades  - Homepage"
+
+#: .\registration\templates\registration\login.html:41
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: .\registration\templates\registration\login.html:78
+#: .\registration\templates\registration\login.html:79
+msgid "Username"
+msgstr "Usuario"
+
+#: .\registration\templates\registration\login.html:82
+#: .\registration\templates\registration\login.html:83
+msgid "Password"
+msgstr "Contraseña"

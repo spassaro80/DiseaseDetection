@@ -27,10 +27,10 @@
                                         <div class="card-body ">
                                                 <div class="form-group">
                                                     <label for="name">{% trans "Name of Disease" %}</label>
-                                                    <input type="text" placeholder="Enter name" class="form-control" id="name" value="{{disease.name}}" name="name" readonly>
+                                                    <input type="text" placeholder="{% trans 'Enter name' %}" class="form-control" id="name" value="{{disease.name}}" name="name" readonly>
                                                 </div>
                                                 <div class="form-group">
-                                                    <textarea id="description" name="description" placeholder="Enter a brief description of your symptoms" style="width:100%;"rows="5"></textarea>
+                                                    <textarea id="description" name="description" placeholder="{% trans 'Enter a brief disease description' %}" style="width:100%;"rows="5"></textarea>
                                                 </div>
                                         </div>
                                     </div>
