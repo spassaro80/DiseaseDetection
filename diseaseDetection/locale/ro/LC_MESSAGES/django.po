@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-24 19:26+0100\n"
+"POT-Creation-Date: 2021-02-28 20:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -126,8 +126,14 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: .\core\templates\core\display.html:5 .\core\templates\core\display.html:9
+#: .\core\templates\core\diseases.html:43 .\core\templates\core\display.html:5
+#: .\core\templates\core\display.html:9
 msgid "Display Disease"
+msgstr ""
+
+#: .\core\templates\core\diseases.html:44 .\core\templates\core\update.html:5
+#: .\core\templates\core\update.html:9
+msgid "Update Disease"
 msgstr ""
 
 #: .\core\templates\core\home.html:6
@@ -196,10 +202,6 @@ msgstr ""
 
 #: .\core\templates\core\template.html:103
 msgid "Logout"
-msgstr ""
-
-#: .\core\templates\core\update.html:5 .\core\templates\core\update.html:9
-msgid "Update Disease"
 msgstr ""
 
 #: .\core\templates\core\update.html:24
