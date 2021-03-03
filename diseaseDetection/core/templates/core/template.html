@@ -106,6 +106,30 @@
                             </ul>
                         </div>
                     </li>
+                    <li class="nav-item">
+                    {% if request.user.is_superuser %}
+                        <a class="nav-link" data-toggle="collapse" href="#admin">
+                            <i class="nc-icon nc-app"></i>
+                            <p>{% trans "Settings" %}<b class="caret"></b></p>
+                        </a>
+                        <div class="collapse " id="admin">
+                            <ul class="nav">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="{% url 'admin:index' %}">
+                                        <span class="sidebar-mini">L</span>
+                                        <span class="sidebar-normal">{% trans "Admin Web Page" %}</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="/rosetta">
+                                        <span class="sidebar-mini">R</span>
+                                        <span class="sidebar-normal">{% trans "Manage languages" %}</span>
+                                    </a>
+                                </li>
+                    {% endif %}
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>

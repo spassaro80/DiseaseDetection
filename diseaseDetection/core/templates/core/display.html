@@ -24,6 +24,10 @@
                                     <div class="card-body ">
                                         <p>{{disease.description}}</p>
                                     </div>
+                                    <div class="card-footer ">
+                                        <a href="{% url 'core:create_survey' disease.pk %}"  class="btn btn-link btn-success display">
+                                        <button type="submit" class="btn btn-fill btn-info">{% trans "Submit new Form" %}</button></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
