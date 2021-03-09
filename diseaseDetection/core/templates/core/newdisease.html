@@ -42,7 +42,7 @@
                                     <div class="card-body ">
                                         <div class="row">
                                         {% for category in categories %}
-                                            <label class="col-sm-2 mt-2 control-label">{{category}}</label>
+                                            <label class="col-sm-2 mt-2 control-label">{{ forloop.counter }}  {{category}}</label>
                                             <div class="col-sm-2 col-sm-offset-1 checkbox-radios">
                                                 <div class="col md-6">
                                                     <select name="{{category}}" class="selectpicker" data-title="{% trans 'Select symptom' %}" data-style="btn-default btn-outline" data-menu-style="dropdown-blue">

@@ -44,7 +44,7 @@
                                     <div class="card-body ">
                                         <div class="row">
                                         {% for category in categories %}
-                                            <label class="col-sm-2 control-label">{{category.name}}</label>
+                                            <label class="col-sm-2 control-label">{{ forloop.counter }}  {{category}}</label>
                                             <div class="col-sm-2 col-sm-offset-1 checkbox-radios">
                                             {% for symptom in category.symptom_set.all %}
                                             {% if symptom in disease.symptoms.all%}
